@@ -1,12 +1,12 @@
 
-# Create SPA Netsuite ![CI status](https://img.shields.io/badge/build-passing-brightgreen.svg)
+# Create SDF Netsuite ![CI status](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
   
-create-spa-netsuite is a CLI that scaffolds SPA projects taking away hours of setup.
-Develop in the comfort of your own machine and then deploy to Netsuite when you are ready 😊
+create-sdf-netsuite is a CLI that scaffolds an SDF projects taking away hours of setup.
+Develop with typescript and then deploy to Netsuite when you are ready 😊
   
 
-![Finity Devs](https://raw.githubusercontent.com/dealmeddevs/sns-small-netsuite-script/main/images/logo.png?token=AENI2YIGKYE3OYOLAVA46UK7SG372)
+![Finity Devs](https://raw.githubusercontent.com/finitydevs/create-sdf-netsuite/main/images/logo.png?token=AENI2YMVFMEBTTUL6WS7DDS7RB7ZY)
 
 
 
@@ -41,4 +41,4 @@ Hope you enjoy! Dont forget to star the repo and feel free to contribute!
 
 This project is backed by [Finity Development](https://www.finitydevelopment.com/)
 
-![Finity Devs](https://raw.githubusercontent.com/dealmeddevs/sns-small-netsuite-script/main/images/fd_logo.png?token=AENI2YMKW3C7DTDRWQWP65K7SG4P2)
+![Finity Devs](https://raw.githubusercontent.com/finitydevs/create-sdf-netsuite/main/images/fd_logo.png?token=AENI2YIYKL4HHJAXABPR22C7RB7YY)
