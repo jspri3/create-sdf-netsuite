@@ -6,36 +6,7 @@
   <notifyemails></notifyemails>
   <notifyowner>T</notifyowner>
   <notifyuser>F</notifyuser>
-  <scriptfile>[/SuiteScripts/<%=FILE_CAB_FOLDER%>/scripts/suitelets/<%=PROJECT_INITIALS%>_<%=PROJECT_ID.toLowerCase()%>_sl.js]</scriptfile>
-    <scriptcustomfields>
-    <scriptcustomfield scriptid="custscript_<%=PROJECT_ID.toLowerCase()%>_show_nav">
-      <accesslevel>2</accesslevel>
-      <applyformatting>F</applyformatting>
-      <checkspelling>F</checkspelling>
-      <defaultchecked>F</defaultchecked>
-      <defaultselection></defaultselection>
-      <defaultvalue></defaultvalue>
-      <description>Checking this box will display the netsuite navbar with the SPA</description>
-      <displayheight></displayheight>
-      <displaytype>NORMAL</displaytype>
-      <displaywidth></displaywidth>
-      <dynamicdefault></dynamicdefault>
-      <fieldtype>CHECKBOX</fieldtype>
-      <help></help>
-      <isformula>F</isformula>
-      <ismandatory>F</ismandatory>
-      <label>Show Netsuite Nav</label>
-      <linktext></linktext>
-      <maxlength></maxlength>
-      <maxvalue></maxvalue>
-      <minvalue></minvalue>
-      <onparentdelete></onparentdelete>
-      <searchlevel>2</searchlevel>
-      <selectrecordtype></selectrecordtype>
-      <setting></setting>
-      <storevalue>T</storevalue>
-    </scriptcustomfield>
-  </scriptcustomfields>
+  <scriptfile>[/SuiteScripts/<%=FILE_CAB_FOLDER%>/suitelets/<%=PROJECT_INITIALS%>_<%=PROJECT_ID.toLowerCase()%>_sl.js]</scriptfile>
   <scriptdeployments>
     <scriptdeployment scriptid="customdeploy_<%=PROJECT_INITIALS%>_<%=PROJECT_ID.toLowerCase()%>_sl">
       <allemployees>T</allemployees>

@@ -1,14 +1,14 @@
-<restlet scriptid="customscript_<%=PROJECT_INITIALS%>_<%=PROJECT_ID.toLowerCase()%>_rl">
+<restlet scriptid="customscript_<%=PROJECT_INITIALS%>_<%=PROJECT_ID.toLowerCase()%>_cs">
   <description></description>
   <isinactive>F</isinactive>
-  <name><%=PROJECT_INITIALS.toUpperCase()%> <%=PROJECT_ID.toUpperCase()%> RL</name>
+  <name><%=PROJECT_INITIALS.toUpperCase()%> <%=PROJECT_ID.toUpperCase()%> CS</name>
   <notifyadmins>F</notifyadmins>
   <notifyemails></notifyemails>
   <notifyowner>T</notifyowner>
   <notifyuser>F</notifyuser>
-  <scriptfile>[/SuiteScripts/<%=FILE_CAB_FOLDER%>/restlets/<%=PROJECT_INITIALS%>_<%=PROJECT_ID.toLowerCase()%>_rl.js]</scriptfile>
+  <scriptfile>[/SuiteScripts/<%=FILE_CAB_FOLDER%>/clients/<%=PROJECT_INITIALS%>_<%=PROJECT_ID.toLowerCase()%>_cs.js]</scriptfile>
   <scriptdeployments>
-    <scriptdeployment scriptid="customdeploy_<%=PROJECT_INITIALS%>_<%=PROJECT_ID.toLowerCase()%>_rl">
+    <scriptdeployment scriptid="customdeploy_<%=PROJECT_INITIALS%>_<%=PROJECT_ID.toLowerCase()%>_cs">
       <allemployees>T</allemployees>
       <allpartners>F</allpartners>
       <allroles>T</allroles>
@@ -16,7 +16,7 @@
       <isdeployed>T</isdeployed>
       <loglevel>DEBUG</loglevel>
       <status>RELEASED</status>
-      <title><%=PROJECT_INITIALS.toUpperCase()%> <%=PROJECT_ID.toUpperCase()%> RL</title>
+      <title><%=PROJECT_INITIALS.toUpperCase()%> <%=PROJECT_ID.toUpperCase()%> CS</title>
     </scriptdeployment>
   </scriptdeployments>
 </restlet>
