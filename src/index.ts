@@ -2,7 +2,6 @@
 
 import * as inquirer from 'inquirer'
 import * as path from 'path'
-import * as fs from 'fs'
 import {
 	defaultStringValidate,
 	getTemplateConfig,
@@ -20,8 +19,6 @@ const args = yargs.argv['_']
 const PROJECT_NAME = args.length === 1 ? args[0] : ('' as string)
 
 checkAppName(PROJECT_NAME)
-
-const CHOICES = fs.readdirSync(path.join(__dirname, '../templates')).filter((f) => f !== 'sdf')
 
 const QUESTIONS = [
 	{
@@ -44,26 +41,6 @@ const QUESTIONS = [
 			else if (input.length < 4) return true
 			else return 'Must be less then 4 characters'
 		}
-	},
-	{
-		name: 'ACCOUNT_ID',
-		type: 'input',
-		message: 'Netsuite Account ID:',
-		when: () => !yargs.argv['ACCOUNT_ID'],
-		validate: (input: string) => {
-			if (defaultStringValidate(input)) return true
-			else return 'Only include letters, numbers, and underscores'
-		}
-	},
-	{
-		name: 'FILE_CAB_FOLDER',
-		type: 'input',
-		message: 'Enter a folder name. This will be the project folder in Netsuite Suitescripts/',
-		when: () => !yargs.argv['FILE_CAB_FOLDER'],
-		validate: (input: string) => {
-			if (defaultStringValidate(input)) return true
-			else return 'Only include letters, numbers, and underscores'
-		}
 	}
 ]
 
@@ -74,7 +51,7 @@ inquirer.prompt(QUESTIONS).then((results: any) => {
 		PROJECT_NAME
 	}
 
-	const template = answers['TEMPLATE']
+	const template = 'sdf'
 	const projectName = answers['PROJECT_NAME']
 	const templatePath = path.join(__dirname, '..', 'templates', template)
 	const tartgetPath = path.join(CURR_DIR, projectName)
@@ -93,25 +70,15 @@ inquirer.prompt(QUESTIONS).then((results: any) => {
 		PROJECT_NAME: answers['PROJECT_NAME'],
 		PROJECT_ID: answers['PROJECT_ID'],
 		PROJECT_INITIALS: (answers['PROJECT_INITIALS'] || ('' as string)).toLowerCase(),
-		ACCOUNT_ID: answers['ACCOUNT_ID'],
-		FILE_CAB_FOLDER: answers['FILE_CAB_FOLDER'],
+		FILE_CAB_FOLDER: projectName,
 		GITIGNORE_FILE: '.gitignore'
 	}
 
 	if (!createProject(tartgetPath)) return
 
-	//for client
-	createDirectoryContents(options, answersCli)
-
 	//for SDF
 	createDirectoryContents(
 		{ ...options, templatePath: path.join(__dirname, '..', 'templates', 'sdf'), templateName: 'sdf' },
-		answersCli
-	)
-
-	//for .gitnore and otherTemplates
-	createDirectoryContents(
-		{ ...options, templatePath: path.join(__dirname, '..', 'otherTemplates'), templateName: '.gitignore' },
 		answersCli
 	)
 

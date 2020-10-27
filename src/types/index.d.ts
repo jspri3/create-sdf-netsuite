@@ -16,7 +16,6 @@ export interface CliAnswers {
   PROJECT_NAME: string
   PROJECT_INITIALS: string
   PROJECT_ID: string
-  ACCOUNT_ID: string
   GITIGNORE_FILE: string
   FILE_CAB_FOLDER: string
 }

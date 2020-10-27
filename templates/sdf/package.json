@@ -5,12 +5,10 @@
     "setup": "npm run build && suitecloud account:setup",
     "deploy": "npm run build && suitecloud project:deploy",
     "fu": "suitecloud file:upload -i",
-    "deploy:all": "cd ../client && npm run build && cd ../sdf && npm run build && suitecloud project:deploy",
     "deploy:dist": "suitecloud project:deploy",
-    "build": "shx rm -rf dist && tsc && npm run copy:xml && npm run copy:build && node postBuild.js",
+    "build": "shx rm -rf dist && tsc && npm run copy:xml && node postBuild.js",
     "dev": "tsc -w",
-    "copy:xml": "copyfiles -f src/Objects/*.xml dist/Objects && copyfiles -f src/*.xml dist/",
-    "copy:build": "copyfiles -u 1 \"src/FileCabinet/SuiteScripts/<%=FILE_CAB_FOLDER%>/<%=ASSETS_FOLDER%>/**\"  dist/"
+    "copy:xml": "copyfiles -f src/Objects/*.xml dist/Objects && copyfiles -f src/*.xml dist/"
   },
   "devDependencies": {
     "@hitc/netsuite-types": "^2020.2.4",

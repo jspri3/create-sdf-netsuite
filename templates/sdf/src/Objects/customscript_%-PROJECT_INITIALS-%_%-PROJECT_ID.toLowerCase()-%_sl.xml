@@ -12,7 +12,6 @@
       <allemployees>T</allemployees>
       <allpartners>F</allpartners>
       <allroles>T</allroles>
-      <custscript_<%=PROJECT_ID.toLowerCase()%>_show_nav><%=SHOW_NS_NAVBAR%></custscript_<%=PROJECT_ID.toLowerCase()%>_show_nav>
       <audslctrole></audslctrole>
       <eventtype></eventtype>
       <isdeployed>T</isdeployed>

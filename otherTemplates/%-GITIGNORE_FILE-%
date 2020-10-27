@@ -1,5 +1,0 @@
-dist
-node_modules
-package-lock.json
-sdf/src/FileCabinet/SuiteScripts/<%=FILE_CAB_FOLDER%>/client
-project.json
