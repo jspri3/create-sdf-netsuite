@@ -1,0 +1,38 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+name: Build and deploy Node.js app to Azure Web App - pca-app
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy-netsuite:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Set java JDK version
+        uses: actions/setup-java@v1
+        with:
+          java-version: '11.0.7'
+          java-package: jdk
+          architecture: x64
+
+      - name: Set up Node.js version
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.13'
+
+      - name: npm run deploy
+        env:
+          CI: false
+        run: |
+          npm install
+          npm i -g @oracle/suitecloud-cli
+          npm run build
+          suitecloud account:ci --savetoken --account ${{ secrets.NS_ACCOUNT_ID }} --authid myNetSuiteDevRole --tokenid ${{ secrets.NS_TOKEN_ID }} --tokensecret ${{ secrets.NS_TOKEN_SECRET }}
+          npm run deploy:dist

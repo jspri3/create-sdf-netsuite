@@ -1,4 +1,4 @@
-<restlet scriptid="customscript_<%=PROJECT_INITIALS%>_<%=PROJECT_ID.toLowerCase()%>_ue">
+<usereventscript scriptid="customscript_<%=PROJECT_INITIALS%>_<%=PROJECT_ID.toLowerCase()%>_ue">
   <description></description>
   <isinactive>F</isinactive>
   <name><%=PROJECT_INITIALS.toUpperCase()%> <%=PROJECT_ID.toUpperCase()%> UE</name>
@@ -13,10 +13,11 @@
       <allpartners>F</allpartners>
       <allroles>T</allroles>
       <audslctrole></audslctrole>
+      <executioncontext>ACTION|ADVANCEDREVREC|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CONSOLRATEADJUSTOR|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OTHER|PAYMENTGATEWAY|PAYMENTPOSTBACK|PLATFORMEXTENSION|PORTLET|PROMOTIONS|RESTLET|RESTWEBSERVICES|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WEBAPPLICATION|WEBSERVICES|WEBSTORE|WORKBOOKBUILDER|WORKFLOW</executioncontext>
       <isdeployed>T</isdeployed>
       <loglevel>DEBUG</loglevel>
       <status>RELEASED</status>
       <title><%=PROJECT_INITIALS.toUpperCase()%> <%=PROJECT_ID.toUpperCase()%> UE</title>
     </scriptdeployment>
   </scriptdeployments>
-</restlet>
+</usereventscript>

@@ -1,6 +1,6 @@
 {
   "name": "@finitydevs/create-sdf-netsuite",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/index.js",
   "description": "Generate SDF projects scaffolding which are ready to deploy in netsuite.",
   "author": "Mayer Lench",
